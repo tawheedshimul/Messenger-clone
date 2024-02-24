@@ -55,6 +55,7 @@ const Authform = () => {
             <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
                 <form className="space-y-6" onSubmit={handleSubmit(onSubmit)} >
                     {variant === "REGISTER" && (<Input id='name' errors={errors} label="Name" register={register} />)}
+                    <Input id='email' errors={errors} label="Email" type="email" register={register} />
                     <Input id='password' errors={errors} label="password" type="password" register={register} />
                     <div>
                         <Button disabled={isLoading} fullWidth type="submit"> {variant === 'LOGIN' ? 'Sign In' : 'Sign Up'}</Button>
